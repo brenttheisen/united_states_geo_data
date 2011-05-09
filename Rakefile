@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "geo"
   gem.homepage = "http://github.com/brenttheisen/geo"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = 'City, county, state and postal code models with seed data packaged in a gem for use in Rails.'
+  gem.description = 'City, county, state and postal code models with seed data packaged in a gem for use in Rails.'
   gem.email = "brent@designspiders.com"
   gem.authors = ["Brent Theisen"]
   # dependencies defined in Gemfile

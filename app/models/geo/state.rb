@@ -1,4 +1,4 @@
-module GeoModels
+module Geo
   class State < ActiveRecord::Base
     
   end
