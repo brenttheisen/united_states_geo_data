@@ -1,6 +1,5 @@
 require 'rails/generators/migration'
 
-puts 'BLIGGINS!!!!'
 module Geo
   module Generators
     class InstallGenerator < ::Rails::Generators::Base
@@ -18,7 +17,8 @@ module Geo
       end
 
       def copy_migrations
-        migration_template "create_city.rb", "db/migrate/create_city.rb"
+        migration_template "create_geo_tables.rb", "db/migrate/create_geo_tables.rb"
+        puts "\nCopied create_geo_tables.rb to your app's migrations dir. Don't forget to run 'rake db:migrate' on your app.\n"
       end
     end
   end
