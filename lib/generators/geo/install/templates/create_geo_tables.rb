@@ -3,12 +3,12 @@ class CreateGeoTables < ActiveRecord::Migration
     create_table :city do |t|
       t.integer :county_id, :null => false
       t.integer :state_id, :null => false
-      t.string :name
+      t.string :name, :null => false
       t.timestamps
     end
     create_table :county do |t|
       t.integer :state_id, :null => false
-      t.string :name
+      t.string :name, :null => false
       t.timestamps
     end
     create_table :state do |t|
@@ -19,9 +19,9 @@ class CreateGeoTables < ActiveRecord::Migration
       t.integer :city_id, :null => false
       t.integer :county_id, :null => false
       t.integer :state_id, :null => false
-      t.integer :code
-      t.decimal  "latitude",                  :precision => 10, :scale => 8
-      t.decimal  "longitude",                 :precision => 10, :scale => 8
+      t.integer :code, :null => false
+      t.decimal :latitude, :precision => 10, :scale => 8
+      t.decimal :longitude, :precision => 10, :scale => 8
       t.timestamps
     end
   end
