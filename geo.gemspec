@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{geo}
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brent Theisen"]
-  s.date = %q{2011-05-09}
-  s.description = %q{TODO: longer description of your gem}
+  s.date = %q{2011-05-12}
+  s.description = %q{City, county, state and postal code models with seed data packaged in a gem for use in Rails.}
   s.email = %q{brent@designspiders.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
@@ -27,7 +28,18 @@ Gem::Specification.new do |s|
     "app/models/geo/county.rb",
     "app/models/geo/postal_code.rb",
     "app/models/geo/state.rb",
+    "data/zipcodes_2006/README.txt",
+    "data/zipcodes_2006/zip_distance.pl",
+    "data/zipcodes_2006/zip_insert.pl",
+    "data/zipcodes_2006/zip_range.pl",
+    "data/zipcodes_2006/zipcode_sql.txt",
+    "data/zipcodes_2006/zipcodes_2006.txt",
+    "db/seeds.rb",
+    "geo.gemspec",
+    "lib/generators/geo/install/install_generator.rb",
+    "lib/generators/geo/install/templates/create_geo_tables.rb",
     "lib/geo.rb",
+    "lib/tasks/load_seed.rake",
     "test/helper.rb",
     "test/test_geo.rb"
   ]
@@ -35,7 +47,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.6.2}
-  s.summary = %q{TODO: one-line summary of your gem}
+  s.summary = %q{City, county, state and postal code models with seed data packaged in a gem for use in Rails.}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
