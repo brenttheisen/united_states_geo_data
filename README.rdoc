@@ -1,19 +1,35 @@
 = geo
 
-Description goes here.
+City, county, state and postal code models with seed data packaged in a gem for use in Rails.
 
-== Contributing to geo
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
-* Fork the project
-* Start a feature/bugfix branch
-* Commit and push until you are happy with your contribution
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+== Installing
+
+Add this to your Gemfile:
+
+geo 'geo', :git => 'git@github.com:brenttheisen/geo.git'
+
+Have bundler install and use the gem:
+
+cd <YOUR_RAILS_APP> ; bundle install
+
+Have geo add the table migrations to your app's migration dir:
+
+rails g geo:install
+
+Run the new migration that will create tables for city, county, state and postal_code:
+
+rake db:migrate
+
+Have geo populate the newly created tables with the seed data it ships with:
+
+rake geo:load_seed
+
+Whew, we're done...
+
+rails console
+Geo::City.count
 
 == Copyright
 
-Copyright (c) 2011 Brent Theisen. See LICENSE.txt for
-further details.
+Copyright (c) 2011 Brent Theisen.
 
