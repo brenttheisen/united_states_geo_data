@@ -24,6 +24,8 @@ class CreateGeoTables < ActiveRecord::Migration
       t.decimal :longitude, :precision => 10, :scale => 8
       t.timestamps
     end
+    
+    add_index :postal_code, :code, :unique => true
   end
 
   def self.down
